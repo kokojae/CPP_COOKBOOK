@@ -9,9 +9,13 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class CPP_COOKBOOK_API UUserProfile : public UObject
 {
 	GENERATED_BODY()
-	
+public:
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stats)
+        float Armor;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stats)
+        float HpMax;
 };
